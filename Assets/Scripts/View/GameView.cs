@@ -68,8 +68,10 @@ public class GameView : MonoBehaviour
 			if (arrow.Direction == ArrowDirection.LeftArrow) {
 				Debug.Log("HAHAHAHHa Left Arrow");
 				arrow.ArrowAnimationDown();
+				GameHandler.Instance.MovePencilLeft (ActivePencil);
 			} else {
 				arrow.ArrowAnimationDown();
+				GameHandler.Instance.MovePencilRight (ActivePencil);
 			}
 		}
 		else if (stype == SelectionType.ButtonUP) {
